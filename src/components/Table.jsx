@@ -8,11 +8,11 @@ const Table = ({ data }) => {
           </tr>
         
           {data.length > 0 ? (
-            data.map((item) => (
-              <tr>
-            <td>{item.name}</td>
-            <td>{item.abilities.map((ability) => ability.ability.name).join(', ')}</td>
-          </tr>
+            data.map((item, index) => (
+            <tr key={item.name+index}>
+              <td>{item.name}</td>
+              <td>{item.abilities.map((ability) => ability.ability.name).join(', ')}</td>
+            </tr>
             ))
           ) : "No data"}
         </tbody>
