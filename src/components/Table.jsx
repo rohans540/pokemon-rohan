@@ -2,12 +2,10 @@ const Table = ({ data }) => {
     return (
       <table>
         <tbody>
-        <thead>
           <tr>
             <th>Name</th>
             <th>Strength</th>
           </tr>
-        </thead>
         
           {data.length > 0 ? (
             data.map((item) => (
